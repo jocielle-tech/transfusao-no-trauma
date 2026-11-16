@@ -1,0 +1,14 @@
+interface:
+  display_name: Transfusão no Trauma
+  short_description: Revisão de evidências e protocolos de transfusão
+  default_prompt: Use $transfusao-no-trauma para revisar um protocolo de hemorragia
+    maciça e indicar as fontes e os pontos a validar localmente.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
