@@ -17,20 +17,9 @@ A skill ajuda a localizar e citar a evidência, identificar o que precisa de val
 
 ## Fluxograma de revisão
 
-O fluxograma abaixo descreve **como a skill trabalha**.
+O algoritmo apresenta as etapas de trabalho da skill, desde a pergunta até a entrega com referências e pendências para validação local.
 
-```mermaid
-flowchart TD
-    A[Informar a pergunta e o cenário] --> B[Localizar a seção da diretriz]
-    B --> C{Qual é o objetivo?}
-    C -->|Ensino| D[Resumir evidência e limitações]
-    C -->|Protocolo| E[Comparar a prática com a diretriz]
-    C -->|Auditoria| F[Definir indicadores e fontes]
-    D --> G[Citar edição e página ou seção]
-    E --> G
-    F --> G
-    G --> H[Indicar pendências de validação]
-```
+![Algoritmo de revisão, com caminhos para ensino, revisão de protocolo e auditoria](assets/fluxograma-revisao.svg)
 
 ## Instalação
 
@@ -76,11 +65,23 @@ Copie a pasta `transfusao-no-trauma` para o diretório de skills reconhecido pel
 
 ## Exemplos de uso
 
-| Quero… | Exemplo de pedido |
-| --- | --- |
-| Preparar uma aula | “Use a skill transfusao-no-trauma para montar uma aula sobre transfusão pré-hospitalar, com fontes e questões para discussão.” |
-| Revisar o protocolo local | “Compare os critérios documentados de ativação e encerramento com a diretriz do ACS e identifique o que exige validação pela hemoterapia.” |
-| Auditar o fluxo | “Proponha indicadores para o intervalo entre ativação e primeira transfusão e para o destino dos hemocomponentes liberados.” |
+Inclua o contexto, o público e o formato desejado no pedido. Ao revisar um protocolo ou planejar uma auditoria, forneça os documentos disponíveis e dados desidentificados.
+
+**Preparar uma aula**
+
+> Use a skill transfusao-no-trauma para planejar uma aula de 30 minutos para residentes sobre transfusão pré-hospitalar. Resuma a evidência, cite as fontes e proponha três perguntas para discussão.
+
+**Revisar um protocolo**
+
+> Compare os critérios de ativação e encerramento do protocolo anexado com a diretriz do ACS. Apresente prática documentada, recomendação, proposta e pontos a validar com a hemoterapia. Identifique informações ausentes.
+
+**Planejar uma auditoria**
+
+> Proponha indicadores para o intervalo entre ativação e primeira transfusão e para o destino dos hemocomponentes liberados. Defina população, numerador, denominador, fonte e marcos temporais.
+
+**Criar uma simulação**
+
+> Crie um caso fictício de trauma com hemorragia para discussão em equipe. Inclua informações progressivas, perguntas para os participantes, referências e pontos que dependem do protocolo local.
 
 ## Fonte clínica
 

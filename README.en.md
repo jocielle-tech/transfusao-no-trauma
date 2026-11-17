@@ -17,20 +17,9 @@ Use the skill to locate and cite evidence, flag decisions that need local valida
 
 ## Review workflow
 
-The diagram shows **how the skill handles requests**.
+The workflow follows a request from the initial question to a referenced deliverable and items for local validation.
 
-```mermaid
-flowchart TD
-    A[Specify the question and setting] --> B[Find the relevant guideline section]
-    B --> C{What is the goal?}
-    C -->|Teaching| D[Summarize evidence and limitations]
-    C -->|Protocol review| E[Compare current practice and guidance]
-    C -->|Quality audit| F[Define measures and data sources]
-    D --> G[Cite the edition and page or section]
-    E --> G
-    F --> G
-    G --> H[Flag items for local validation]
-```
+![Review workflow with paths for teaching, protocol review, and quality audit](assets/review-workflow.svg)
 
 ## Installation
 
@@ -76,11 +65,23 @@ Copy the `transfusao-no-trauma` folder into the skill directory recognized by yo
 
 ## Example prompts
 
-| Goal | Example |
-| --- | --- |
-| Prepare a teaching session | “Use the transfusao-no-trauma skill to outline a session on prehospital transfusion. Answer in English and include citations and discussion questions.” |
-| Review a local protocol | “Compare our documented activation and cessation criteria with the ACS guideline and flag what the transfusion service should validate.” |
-| Plan an audit | “Propose quality measures for time from activation to first transfusion and for the disposition of issued blood components.” |
+Include the setting, audience, and desired format in your request. For protocol reviews and audits, provide available documents and de-identified data.
+
+**Prepare a teaching session**
+
+> Use the transfusao-no-trauma skill to plan a 30-minute session for residents on prehospital transfusion. Summarize the evidence, cite sources, and propose three discussion questions. Answer in English.
+
+**Review a protocol**
+
+> Compare the activation and cessation criteria in the attached protocol with the ACS guideline. Show documented practice, recommendations, proposed changes, and items for the transfusion service to validate. Identify missing information.
+
+**Plan an audit**
+
+> Propose measures for time from activation to first transfusion and the disposition of issued blood components. Define the population, numerator, denominator, data source, and timestamps.
+
+**Create a simulation**
+
+> Create a fictional trauma hemorrhage case for a team discussion. Include information revealed in stages, participant questions, references, and points that depend on the local protocol.
 
 ## Clinical source
 
